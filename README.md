@@ -8,4 +8,4 @@
 
 * Using Serial with Python
 
-![Imgur](http://i.imgur.com/dn6jj4O.png)
+![Imgur](http://i.imgur.com/1Wb2c2C.png)
