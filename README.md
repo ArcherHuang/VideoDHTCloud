@@ -5,3 +5,7 @@
 * 物聯網架構與應用
    
 ![Imgur](http://i.imgur.com/XbPXX59.png)
+
+* Using Serial with Python
+
+![Imgur](http://i.imgur.com/9Di8eyB.png)
