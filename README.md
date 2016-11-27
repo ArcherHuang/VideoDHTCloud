@@ -9,3 +9,4 @@
 * Using Serial with Python
 
 ![Imgur](http://i.imgur.com/5Su09Vc.png)
+
