@@ -23,17 +23,20 @@ def setup():
   s = serial.Serial("/dev/ttyS0", 57600) 
 
 # *****************************************************************************************
-# GET http://mylinkit.local:5000/api/v1.0/turnOnOffLED
+# GET http://mylinkit.local:5000/api/v1.0/turnOnLED
 # *****************************************************************************************
-@app.route("/api/v1.0/turnOnOffLED", methods=['POST'])
-def setvideoon():
-	value = request.form['value']
-	if value == 'on':
-		s.write("1") 
-	else:
-		s.write("0")	
-	return json.dumps({"status": 200, "comment": "call turnOnOffLED Finish"})
+@app.route("/api/v1.0/turnOnLED", methods=['GET'])
+def setturnOnLED():
+	s.write("1") 	
+	return json.dumps({"status": 200, "comment": "call turnOnLED Finish"})
 
+# *****************************************************************************************
+# GET http://mylinkit.local:5000/api/v1.0/turnOffLED
+# *****************************************************************************************
+@app.route("/api/v1.0/turnOffLED", methods=['GET'])
+def setturnOffLED():
+	s.write("0") 	
+	return json.dumps({"status": 200, "comment": "call turnOffLED Finish"})
 
 if __name__ == '__main__': 
 	setup() 
@@ -43,4 +46,3 @@ if __name__ == '__main__':
 		host = inet_addr,
 		port = 5000
 	)
-  
